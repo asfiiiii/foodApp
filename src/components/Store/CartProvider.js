@@ -51,6 +51,9 @@ const cartReducer = (state, action) => {
       totalAmount: updatedTotalAmount,
     };
   }
+  if (action.type === "EMPTY_CART") {
+    return defaultState;
+  }
 };
 function CartProvider(props) {
   const [cartState, dispatchCartAction] = useReducer(cartReducer, defaultState);
@@ -69,12 +72,17 @@ function CartProvider(props) {
     });
   };
 
+  const emptyCartHandler = () => {
+    dispatchCartAction({ type: "EMPTY_CART" });
+  };
+
   // Define the context value as an object
   const cartContextValue = {
     items: cartState.items,
     totalAmount: cartState.totalAmount,
     addItem: addCartItemHandler, // Assign the function reference
     removeItem: removeCartItemHandler, // Assign the function reference
+    emptyCart: emptyCartHandler, // Assign the function reference
   };
 
   return (

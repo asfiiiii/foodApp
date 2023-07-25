@@ -10,7 +10,14 @@
   margin: 0;
   padding: 0;
 }
-
+.isLoading {
+  font-size: 1.5rem;
+  color: red;
+  font-family: serif;
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+}
 @keyframes meals-appear {
   from {
     opacity: 0;

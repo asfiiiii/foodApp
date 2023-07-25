@@ -1,0 +1,41 @@
+.form {
+  overflow: auto;
+  max-height: 210px;
+}
+
+.control {
+  margin: 2px 0px;
+  display: flex;
+  flex-direction: column;
+}
+.control label {
+  font-weight: 600;
+  padding-right: 5px;
+  font-size: 1.1rem;
+}
+.control input {
+  border: 1px solid transparent;
+  border-bottom: 1px solid rgb(224, 224, 224);
+  max-width: 300px;
+  margin: 3px 0px 0px 0px;
+}
+.control input:focus {
+  border: none;
+}
+
+button {
+  background-color: #8a2b06;
+  color: white;
+  padding: 7px 12px;
+  margin: 5px 10px;
+  border-radius: 10px;
+  border-color: #8a2b06;
+}
+.btns {
+  display: flex;
+  justify-content: flex-end;
+}
+.err {
+  font-size: 0.7rem;
+  color: red;
+}
